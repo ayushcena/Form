@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <style>
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+     @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    body{
+      background-image: url(images/bg-intro-desktop.png);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+      background-color: hsl(0, 100%, 74%);
+      margin: 0;
+      padding: 0;
+    }
+    form#register{
+      position: absolute;
+      margin-left: 54vw;
+      margin-right: 12%;
+      width: 32vw;
+      top: 12rem;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      background-color: white;
+      border-radius: 10px;
+      border: 1px solid white;
+      color: #fff;
+      padding-top: 1.5%;
+      padding-bottom: 3%;
+      box-shadow: 1px 7px rgba(0, 0, 0, 0.2);
+    }
+    input#name{
+      font-weight: bold;
+      height: 30px;
+      margin-left: 8%;
+      margin-right: 8%;
+      margin-top: 1.75%;
+      margin-bottom: 1.75%;
+      padding: 8px;
+      padding-left: 5%;
+      border:1px solid rgba(128, 128, 128, 0.274);
+      border-radius: 5px;
+      font-weight: 600;
+      font-size: 12px;
+    }
+    input#name::placeholder{
+      opacity: 75%;
+    }
+    #submit{
+      background-color: hsl(154, 59%, 51%);
+      color: white;
+      height: 48px;
+      margin-left: 8%;
+      margin-right: 8%;
+      margin-top: 1.75%;
+      margin-bottom: 1.75%;
+      border-radius: 5px;
+      padding: 10px 0 10px 0;
+      border: 1px solid transparent;
+      box-shadow: 0px 3px hsl(154, 68%, 43%) ;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    #submit:hover{
+      background-color:hsl(154, 51%, 59%) ;
+    }
+    .btext{
+      font-size: 10px;
+      text-align: center;
+      font-weight: 500;
+      margin-top: 2%;
+      color: hsl(246, 25%, 77%);
+    }
+    .terms{
+      display: inline;
+      color: rgb(252, 19, 19);
+      font-weight: 900;
+      cursor: pointer;
+      margin: auto;
+    }
+    .heading1{
+      position: absolute;
+      top: 17rem;
+      left: 12%;
+      right: 60%;
+      color: white;
+      font-size: 3.3vw;
+      font-weight: 700;
+      letter-spacing: 0.01px;
+    }
+    .heading2{
+      position: absolute;
+      top:20rem;
+      left: 12%;
+      right: 60%;
+      color: white;
+      font-size: 3.3vw;
+      font-weight: 700;
+      letter-spacing: 0.01px;
+    }
+    .try{
+      border: 2px solid hsl(249, 32%, 48%);
+      position: absolute;
+      top: 7rem;
+      margin-left: 54%;
+      font-size: 13px;
+      width: 32%;
+      text-align: center;
+      padding-top: 0.8%;
+      padding-bottom: 0.8%;
+      border-radius: 10px;
+      background-color:hsl(248, 32%, 49%);
+      color: white;
+      box-shadow: 0px 7px rgba(0, 0, 0, 0.19);
+      font-weight:400;
+    }
+    .trybold{
+      font-weight: 900;
+      display: inline;
+    }
+    .text{
+      position: absolute;
+      top: 25rem;
+      left: 12%;
+      right: 54%;
+      color: white;
+      font-weight: 400;
+    }
+    @media (max-width:650px) {
+      *{
+        margin: 0;
+        padding: 0;
+        left: 0;
+        right: 0;
+      }
+      .heading1{
+        display: block;
+        font-size: 8vw;
+        width: 100%;
+        top: 15vw;
+        position: absolute; 
+        left: 8%;
+        right: 0;
+        text-align: center;
+        letter-spacing: 0;
+        font-weight: 600;
+        padding: 0;
+      }
+      .heading2{
+        display: block;
+        font-size: 8vw;
+        width: 100%;
+        top: 25vw; 
+        position: relative; 
+        left: 8%;
+        right: 0;
+        text-align: center;
+        letter-spacing: 0;
+        font-weight: 600;
+        padding: 0;
+      }
+      .text{
+       position: absolute;
+       border: 1px solid transparent;
+       top: 44vw;
+       left: 10%;
+       right: 0;
+       text-align: center;
+       padding: 0, 8%, 0, 8%;
+       color: white;
+       font-weight: 400;
+       font-size: 5vw;
+       /* line-height: 3.5vh; */
+      }
+      .try{
+       border: 2px solid hsl(249, 32%, 48%);
+       position: absolute;
+       top: 88vw;
+       left: 0;
+       right: 0.2vw;
+       margin-left: 4.5%;
+       margin-right: 5%;
+       font-size: 4.5vw;
+       padding-top: 4%;
+       padding-bottom: 4%;
+       padding-left: 25vw;
+       padding-right: 25vw;
+       width: 50vw;
+       border-radius: 10px;
+       background-color:hsl(248, 32%, 49%);
+       color: white;
+       box-shadow: 0px 7px rgba(0, 0, 0, 0.19);
+       font-weight:400;
+    }
+    .trybold{
+      font-weight: 900;
+    }
+    form#register{
+      position: absolute;
+      left: 4%;
+      right: 0;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      top: 120vw;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      background-color: white;
+      border-radius: 10px;
+      border: 1px solid white;
+      color: #fff;
+      padding-top: 1.5%;
+      padding-bottom: 3%;
+      box-shadow: 1px 7px rgba(0, 0, 0, 0.2);
+    }
+    .btext{
+      font-size: 10px;
+      margin-left: 7vw;
+      margin-right: 7vw;
+      font-weight: 500;
+      margin-top: 2%;
+      color: hsl(246, 25%, 77%);
+      text-align: center;
+    }
+    .terms{
+      display: inline;
+      color: rgb(252, 19, 19);
+      font-weight: 900;
+      cursor: pointer;
+      margin: auto;
+    }
+    input#name::placeholder{
+      opacity: 80%;
+    }
+    input#name{
+      font-size: 3.5vw;
+    }
+    }
+  </style>
+</head>
+<body>
+
+<div class="heading1">Learn to code by</div> <div class="heading2">watching others</div>
+
+ <div class="text">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</div>
+
+ <div class="try"><div class="trybold">Try it free 7 days</div> then $20/mo. thereafter</div>
+
+  <form id="register" method="post">
+    <input type="text" name="fname" id="name" placeholder="First Name"> 
+    <input type="text" name="lname" id="name" placeholder="Last Name">
+    <input type="email" name="email" id="name" placeholder="Email Address"> 
+    <input type="password" name="password" id="name" placeholder="Password">
+    <!-- adding submit button to form -->
+    <input type="submit" value="CLAIM YOUR FREE TRIAL" name="submit" id="submit">
+    <div class="btext">By clicking the button, you are agreeing to our <div class="terms">Terms and Services</div></div>
+  </form>
+</body>
+</html>
